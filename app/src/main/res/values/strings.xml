@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Book Listing Application</string>
+    <string name="search_hint">Enter any keyword(s) about the author, title of your book, etc. separated by commas or spaces</string>
+    <string name="no_internet_connection">No internet connection</string>
+    <string name="no_result">Oups, it seems there is no result for your search, give it another try.</string>
+    <string name="question">What are you seeking?</string>
+</resources>
