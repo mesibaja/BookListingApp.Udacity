@@ -13,7 +13,7 @@
         <item name="android:layout_height">@dimen/button</item>
         <item name="android:layout_gravity">center_vertical</item>
         <item name="android:layout_margin">@dimen/medium_margin</item>
-        <!--<item name="android:background">@drawable/search</item>-->
+        <item name="android:background">@drawable/search_button</item>
     </style>
 
     <style name="Field">

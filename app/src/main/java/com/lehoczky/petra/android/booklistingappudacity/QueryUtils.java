@@ -32,7 +32,6 @@ public class QueryUtils {
      * Query the Google book api dataset and return a list of {@link Book} objects.
      */
     public static List<Book> fetchBooksData(String requestUrl) {
-
         // Create URL object
         URL url = createUrl(requestUrl);
 
@@ -44,8 +43,8 @@ public class QueryUtils {
             Log.e(LOG_TAG, "Problem making the HTTP request.", e);
         }
 
-        // Extract relevant fields from the JSON response and create a list of {@link Book}s
-        // Return the list of {@link Book}s
+        // Extract relevant fields from the JSON response and create a list of {@link Earthquake}s
+        // Return the list of {@link Earthquake}s
         return extractFeatureFromJson(jsonResponse);
     }
 
@@ -91,7 +90,7 @@ public class QueryUtils {
                 Log.e(LOG_TAG, "Error response code: " + urlConnection.getResponseCode());
             }
         } catch (IOException e) {
-            Log.e(LOG_TAG, "Problem retrieving the book JSON results.", e);
+            Log.e(LOG_TAG, "Problem retrieving the earthquake JSON results.", e);
         } finally {
             if (urlConnection != null) {
                 urlConnection.disconnect();
@@ -208,7 +207,7 @@ public class QueryUtils {
             Log.e("QueryUtils", "Problem parsing the earthquake JSON results", e);
         }
 
-        // Return the list of books
+        // Return the list of earthquakes
         return books;
     }
 }

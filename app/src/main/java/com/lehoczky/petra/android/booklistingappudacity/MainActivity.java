@@ -25,7 +25,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements LoaderCallbacks<List<Book>> {
 
-    private final static String BASE_URL = "https://www.googleapis.com/books/v1/volumes?maxResults=40&q=";
+    private final static String BASE_URL = "https://www.googleapis.com/books/v1/volumes?maxResults=20&q=";
     private String mUrl;
     /**
      * Constant value for the book loader ID. We can choose any integer.
@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity implements LoaderCallbacks<L
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         // Find a reference to the in the activity_main
-        final EditText searchTextView = (EditText) findViewById(R.id.text_search);
+        final EditText searchTextView = (EditText) findViewById(R.id.search_field);
         loadingIndicator = (ProgressBar) findViewById(R.id.loading_indicator);
         ListView bookListView = (ListView) findViewById(R.id.list);
         mEmptyStateTextView = (TextView) findViewById(R.id.empty_view);
@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity implements LoaderCallbacks<L
             }
         });
 
-        Button searchButton = (Button) findViewById(R.id.button_search);
+        Button searchButton = (Button) findViewById(R.id.search_button);
 
         searchButton.setOnClickListener(new View.OnClickListener() {
             @Override
